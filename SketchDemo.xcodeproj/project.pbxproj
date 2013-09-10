@@ -23,6 +23,10 @@
 		01E384AA17DEE84000A675CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E3848517DEE84000A675CC /* Foundation.framework */; };
 		01E384B217DEE84000A675CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01E384B017DEE84000A675CC /* InfoPlist.strings */; };
 		01E384B517DEE84000A675CC /* SketchDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E384B417DEE84000A675CC /* SketchDemoTests.m */; };
+		01E384C217DEECB600A675CC /* SketchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E384C117DEECB600A675CC /* SketchView.m */; };
+		01E384C617DEEEE900A675CC /* PathDrawingInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E384C517DEEEE900A675CC /* PathDrawingInfo.m */; };
+		01E384CE17DEF51400A675CC /* PencilTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E384CD17DEF51400A675CC /* PencilTool.m */; };
+		01E384D117DF00D200A675CC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E384D017DF00D200A675CC /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,15 @@
 		01E384B117DEE84000A675CC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		01E384B317DEE84000A675CC /* SketchDemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SketchDemoTests.h; sourceTree = "<group>"; };
 		01E384B417DEE84000A675CC /* SketchDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SketchDemoTests.m; sourceTree = "<group>"; };
+		01E384C017DEECB600A675CC /* SketchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SketchView.h; sourceTree = "<group>"; };
+		01E384C117DEECB600A675CC /* SketchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SketchView.m; sourceTree = "<group>"; };
+		01E384C417DEEEE900A675CC /* PathDrawingInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathDrawingInfo.h; sourceTree = "<group>"; };
+		01E384C517DEEEE900A675CC /* PathDrawingInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathDrawingInfo.m; sourceTree = "<group>"; };
+		01E384C717DEEF1500A675CC /* Drawable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Drawable.h; sourceTree = "<group>"; };
+		01E384C917DEF3D500A675CC /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
+		01E384CC17DEF51400A675CC /* PencilTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PencilTool.h; sourceTree = "<group>"; };
+		01E384CD17DEF51400A675CC /* PencilTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PencilTool.m; sourceTree = "<group>"; };
+		01E384D017DF00D200A675CC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E384D117DF00D200A675CC /* MessageUI.framework in Frameworks */,
 				01E3848417DEE84000A675CC /* UIKit.framework in Frameworks */,
 				01E3848617DEE84000A675CC /* Foundation.framework in Frameworks */,
 				01E3848817DEE84000A675CC /* CoreGraphics.framework in Frameworks */,
@@ -106,6 +120,7 @@
 		01E3848217DEE84000A675CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				01E384D017DF00D200A675CC /* MessageUI.framework */,
 				01E3848317DEE84000A675CC /* UIKit.framework */,
 				01E3848517DEE84000A675CC /* Foundation.framework */,
 				01E3848717DEE84000A675CC /* CoreGraphics.framework */,
@@ -117,11 +132,17 @@
 		01E3848917DEE84000A675CC /* SketchDemo */ = {
 			isa = PBXGroup;
 			children = (
+				01E384C817DEF39500A675CC /* Tools */,
 				01E3849217DEE84000A675CC /* SketchAppDelegate.h */,
 				01E3849317DEE84000A675CC /* SketchAppDelegate.m */,
+				01E384C017DEECB600A675CC /* SketchView.h */,
+				01E384C117DEECB600A675CC /* SketchView.m */,
 				01E3849B17DEE84000A675CC /* SketchViewController.h */,
 				01E3849C17DEE84000A675CC /* SketchViewController.m */,
 				01E3849E17DEE84000A675CC /* SketchViewController.xib */,
+				01E384C717DEEF1500A675CC /* Drawable.h */,
+				01E384C417DEEEE900A675CC /* PathDrawingInfo.h */,
+				01E384C517DEEEE900A675CC /* PathDrawingInfo.m */,
 				01E3848A17DEE84000A675CC /* Supporting Files */,
 			);
 			path = SketchDemo;
@@ -158,6 +179,16 @@
 				01E384B017DEE84000A675CC /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		01E384C817DEF39500A675CC /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				01E384C917DEF3D500A675CC /* Tools.h */,
+				01E384CC17DEF51400A675CC /* PencilTool.h */,
+				01E384CD17DEF51400A675CC /* PencilTool.m */,
+			);
+			name = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +305,9 @@
 				01E3849017DEE84000A675CC /* main.m in Sources */,
 				01E3849417DEE84000A675CC /* SketchAppDelegate.m in Sources */,
 				01E3849D17DEE84000A675CC /* SketchViewController.m in Sources */,
+				01E384C217DEECB600A675CC /* SketchView.m in Sources */,
+				01E384C617DEEEE900A675CC /* PathDrawingInfo.m in Sources */,
+				01E384CE17DEF51400A675CC /* PencilTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,10 +418,12 @@
 		01E384B917DEE84000A675CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: 成儒 宋 (C88P7Z6DW9)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SketchDemo/SketchDemo-Prefix.pch";
 				INFOPLIST_FILE = "SketchDemo/SketchDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "C291C570-2A42-472A-B400-FABE3AC249D0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -395,10 +431,12 @@
 		01E384BA17DEE84000A675CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: 成儒 宋 (C88P7Z6DW9)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SketchDemo/SketchDemo-Prefix.pch";
 				INFOPLIST_FILE = "SketchDemo/SketchDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "C291C570-2A42-472A-B400-FABE3AC249D0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
